@@ -1,0 +1,103 @@
+/* Base Latin typography */
+:root {
+  --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.65;
+  --letter-spacing-base: 0.01em;
+}
+
+@layer base {
+  /* Display headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--md-sys-color-on-surface);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  h1 { font-size: 2.75rem; line-height: 1.15; }
+  h2 { font-size: 2rem; line-height: 1.25; }
+  h3 { font-size: 1.5rem; line-height: 1.35; }
+  h4 { font-size: 1.25rem; line-height: 1.4; }
+
+  body, p, li, span, a {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-base);
+  }
+}
+
+/* === Per-language typography ===
+   These use class/attribute selectors for higher specificity
+   and override CSS custom properties, so they work across layers. */
+
+/* Japanese */
+.lang-ja,
+[lang="ja"] {
+  --font-display: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --font-body: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+  --line-height-base: 1.8;
+  --letter-spacing-base: 0.05em;
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  font-feature-settings: "palt";
+}
+
+.lang-ja h1, .lang-ja h2, .lang-ja h3, .lang-ja h4, .lang-ja h5, .lang-ja h6,
+[lang="ja"] h1, [lang="ja"] h2, [lang="ja"] h3, [lang="ja"] h4, [lang="ja"] h5, [lang="ja"] h6 {
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+}
+
+/* Korean */
+.lang-ko,
+[lang="ko"] {
+  --font-display: 'Noto Serif KR', 'Batang', serif;
+  --font-body: 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  --line-height-base: 1.75;
+  --letter-spacing-base: -0.01em;
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.lang-ko h1, .lang-ko h2, .lang-ko h3, .lang-ko h4, .lang-ko h5, .lang-ko h6,
+[lang="ko"] h1, [lang="ko"] h2, [lang="ko"] h3, [lang="ko"] h4, [lang="ko"] h5, [lang="ko"] h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Chinese (Simplified) */
+.lang-zh,
+[lang="zh"] {
+  --font-display: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  --font-body: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --line-height-base: 1.8;
+  --letter-spacing-base: 0.02em;
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.lang-zh h1, .lang-zh h2, .lang-zh h3, .lang-zh h4, .lang-zh h5, .lang-zh h6,
+[lang="zh"] h1, [lang="zh"] h2, [lang="zh"] h3, [lang="zh"] h4, [lang="zh"] h5, [lang="zh"] h6 {
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+}
+
+/* English (explicit, for when detection applies class) */
+.lang-en,
+[lang="en"] {
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}

@@ -1,0 +1,25 @@
+{
+  "name": "char-lang-detect",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@lit-labs/router": "^0.1.4",
+    "@material/web": "^2.4.1",
+    "@tailwindcss/vite": "^4.2.1",
+    "lit": "^3.3.1",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "typescript": "~5.9.3",
+    "vite": "7",
+    "vitest": "^4.0.18"
+  }
+}

@@ -1,0 +1,84 @@
+/* MD3 Button theming */
+md-filled-button {
+  --md-filled-button-container-color: var(--md-sys-color-primary);
+  --md-filled-button-label-text-color: var(--md-sys-color-on-primary);
+  --md-filled-button-container-shape: var(--radius-xl);
+  --md-filled-button-label-text-font: var(--font-body);
+  --md-filled-button-label-text-size: 1rem;
+  --md-filled-button-container-height: 48px;
+}
+
+md-outlined-button {
+  --md-outlined-button-outline-color: var(--md-sys-color-outline);
+  --md-outlined-button-label-text-color: var(--md-sys-color-primary);
+  --md-outlined-button-container-shape: var(--radius-xl);
+  --md-outlined-button-label-text-font: var(--font-body);
+  --md-outlined-button-label-text-size: 1rem;
+}
+
+md-text-button {
+  --md-text-button-label-text-color: var(--md-sys-color-primary);
+  --md-text-button-label-text-font: var(--font-body);
+}
+
+/* MD3 Chip theming */
+md-assist-chip {
+  --md-assist-chip-outline-color: var(--md-sys-color-outline-variant);
+  --md-assist-chip-label-text-color: var(--md-sys-color-on-surface-variant);
+  --md-assist-chip-container-shape: var(--radius-sm);
+  --md-assist-chip-label-text-font: var(--font-body);
+  --md-assist-chip-label-text-size: 0.85rem;
+  --md-assist-chip-container-height: 32px;
+}
+
+/* MD3 Divider */
+md-divider {
+  --md-divider-color: var(--md-sys-color-outline-variant);
+}
+
+/* MD3 Tabs */
+md-tabs {
+  --md-primary-tab-active-indicator-color: var(--md-sys-color-primary);
+  --md-primary-tab-label-text-color: var(--md-sys-color-on-surface-variant);
+  --md-primary-tab-active-label-text-color: var(--md-sys-color-primary);
+  --md-primary-tab-label-text-font: var(--font-body);
+}
+
+/* MD3 List */
+md-list {
+  --md-list-container-color: transparent;
+}
+
+md-list-item {
+  --md-list-item-label-text-font: var(--font-body);
+  --md-list-item-label-text-color: var(--md-sys-color-on-surface);
+  --md-list-item-supporting-text-font: var(--font-body);
+  --md-list-item-supporting-text-color: var(--md-sys-color-on-surface-variant);
+}
+
+/* MD3 Icon */
+md-icon {
+  --md-icon-size: 24px;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* MD3 Outlined Card (labs) */
+md-outlined-card {
+  --md-outlined-card-container-color: var(--md-sys-color-surface);
+  --md-outlined-card-outline-color: var(--md-sys-color-outline-variant);
+  --md-outlined-card-container-shape: 16px;
+}
+
+/* MD3 FAB */
+md-fab {
+  --md-fab-container-color: var(--md-sys-color-primary);
+  --md-fab-icon-color: var(--md-sys-color-on-primary);
+  --md-fab-container-shape: 28px;
+}
+
+/* MD3 Filter Chip */
+md-filter-chip {
+  --md-filter-chip-outline-color: var(--md-sys-color-outline-variant);
+  --md-filter-chip-label-text-color: var(--md-sys-color-on-surface-variant);
+  --md-filter-chip-selected-container-color: var(--md-sys-color-primary-container);
+}
