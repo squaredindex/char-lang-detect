@@ -19,17 +19,17 @@ export class HeroSection extends LitElement {
 
   render() {
     return html`
-      <section class="noise-texture bg-surface py-24 md:py-32 px-4 text-center flex flex-col items-center justify-center min-h-[70vh]">
-        <p class="text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-6 font-body">
+      <section class="bg-contain bg-bottom bg-no-repeat bg-[url('/assets/bird-nest.png')] px-4 text-center flex flex-col items-center justify-start pt-16 md:pt-24 min-h-[75vh]">
+        <p class="text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-3 font-body">
           ${this.data.date} · ${this.data.location}
         </p>
-        <h1 class="font-display text-[clamp(2.5rem,6vw,4.5rem)] mb-5 text-on-surface leading-tight">
+        <h1 class="font-display text-[clamp(2.5rem,6vw,4.5rem)] mb-3 text-on-surface leading-tight">
           ${this.data.title}
         </h1>
-        <p class="text-lg text-on-surface-variant mb-10 max-w-content font-body">
+        <p class="text-lg text-on-surface-variant mb-6 max-w-content font-body">
           ${this.data.subtitle}
         </p>
-        <div class="flex flex-col gap-3 items-center flex-wrap justify-center">
+        <div class="flex flex-col gap-2 items-center flex-wrap justify-center">
           <md-outlined-button class="py-3 px-8" @click=${() => {
             document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' });
           }}>${this.data.ctaLabel}</md-outlined-button>
