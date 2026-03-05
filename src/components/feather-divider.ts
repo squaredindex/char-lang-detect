@@ -27,6 +27,8 @@ export class FeatherDivider extends LitElement {
       max-width: 100%;
       height: auto;
       display: block;
+      object-position: center;
+      margin: 0 auto;
     }
   `;
 
