@@ -28,12 +28,12 @@ export class SiteNav extends LitElement {
       <nav class="sticky top-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-outline-variant">
         <div class="max-w-page mx-auto flex items-center justify-between px-4 h-16 gap-4">
           <span class="font-display text-xl text-primary whitespace-nowrap font-normal">${this.data.eventName}</span>
-          <ul class="hidden md:flex gap-4 list-none m-0 p-0">
+          <ul class="hidden flex-wrap md:flex gap-4 list-none m-0 p-0">
             ${this.data.links.map(
               (link) => html`<li><a href=${link.href} class="text-on-surface-variant no-underline text-sm hover:text-primary transition-colors">${link.label}</a></li>`
             )}
           </ul>
-          <div class="flex gap-1.5">
+          <div class="flex gap-1 items-center justify-center">
             ${languages.map(
               (l) => html`
                 <a
